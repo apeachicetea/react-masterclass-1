@@ -1,23 +1,25 @@
 import styled from "styled-components";
 
-const Title = styled.h1`
-  color: ${(props) => props.theme.textColor};
-`;
-
-const Wrapper = styled.div`
+const Container = styled.div`
+  height: 100vh;
+  width: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  width: 100vw;
-  background-color: ${(props) => props.theme.backgroundColor};
+  background-color: ${(props) => props.theme.bgColor};
+`;
+
+const H1 = styled.h1`
+  color: ${(props) => props.theme.textColor};
 `;
 
 function App() {
   return (
-    <Wrapper>
-      <Title>Hello</Title>
-    </Wrapper>
+    <div>
+      <Container>
+        <H1>Hello</H1>
+      </Container>
+    </div>
   );
 }
 
